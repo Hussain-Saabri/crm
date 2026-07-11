@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
-import { ModeToggle } from '../ui/dark-button';
+
 export function SidebarHeader({ collapsed }) {
   return (
     <div className={cn(

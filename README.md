@@ -99,14 +99,23 @@ NEXT_PUBLIC_API_URL=http://localhost:5000
 ## 📂 Project Structure
 
 ```text
-src/
-├── app/            # Next.js App Router pages and layouts
-├── components/     # Universal UI components (Layout, Base UI)
-│   ├── import-csv/ # File upload and progress components
-│   ├── manage-leads/# Data tables and search filters
-│   └── ui/         # Base design system components
-├── lib/            # Shared utilities and icons
-└── store/          # Zustand global state management
+frontend/
+├── app/                # Next.js App Router pages and layouts
+├── components/         # Universal UI components (Layout, Base UI)
+│   ├── import-csv/     # File upload and progress components
+│   ├── manage-leads/   # Data tables and search filters
+│   └── ui/             # Base design system components
+├── constants/          # Static data and configuration constants
+├── lib/                # Shared utilities and icons
+├── public/             # Static assets (images, icons)
+├── store/              # Zustand global state management
+├── testing_files/      # Sample files for testing CSV imports
+├── .env.local          # Environment variables (API URL)
+├── .gitignore          # Files to ignore in Git
+├── jsconfig.json       # JS path mapping configuration
+├── next.config.ts      # Next.js application configuration
+├── package.json        # Project metadata and dependencies list
+└── package-lock.json   # Exact versions of installed packages
 ```
 
 ---
