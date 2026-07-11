@@ -23,7 +23,7 @@ export function LeadsTable({ globalFilter, setGlobalFilter, isLoading }) {
   const leads = useLeadsStore((state) => state.leads);
   
   const data = leads.length > 0 ? leads : mockData;
-  console.log("leads data", data);
+  
   const [sorting, setSorting] = useState([]);
   const tableContainerRef = useRef(null);
 

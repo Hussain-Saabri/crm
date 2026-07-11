@@ -41,33 +41,35 @@ export function AppLayout({ children }) {
           <ModeToggle />
         </div>
         
-        <main className="flex-1 overflow-y-auto w-full pb-16 md:pb-0">
+        <main className={cn("flex-1 overflow-y-auto w-full", pathname !== '/' ? "pb-16 md:pb-0" : "")}>
           {children}
         </main>
 
         {/* Standard Mobile Bottom Navigation */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-50 flex justify-around items-center px-2 pb-safe dark:text-white">
-          {NAVIGATION_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
-            const Icon = item.icon;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "flex flex-col items-center justify-center flex-1 h-full transition-all duration-300",
-                  isActive ? "text-[#25B990] dark:text-white" : "text-gray-400 hover:text-gray-600 dark:text-gray-400 hover:text-gray-600"
-                )}
-              >
-                <Icon size={22} className={cn("mb-1", isActive ? "stroke-[2.5px]" : "stroke-[2px]")} />
-                <span className={cn(
-                  "text-[10px] leading-none transition-all duration-300",
-                  isActive ? "font-bold" : "font-medium"
-                )}>{item.label}</span>
-              </Link>
-            );
-          })}
-        </div>
+        {pathname !== '/' && (
+          <div className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-50 flex justify-around items-center px-2 pb-safe dark:text-white">
+            {NAVIGATION_ITEMS.map((item) => {
+              const isActive = pathname === item.href;
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "flex flex-col items-center justify-center flex-1 h-full transition-all duration-300",
+                    isActive ? "text-[#25B990] dark:text-white" : "text-gray-400 hover:text-gray-600 dark:text-gray-400 hover:text-gray-600"
+                  )}
+                >
+                  <Icon size={22} className={cn("mb-1", isActive ? "stroke-[2.5px]" : "stroke-[2px]")} />
+                  <span className={cn(
+                    "text-[10px] leading-none transition-all duration-300",
+                    isActive ? "font-bold" : "font-medium"
+                  )}>{item.label}</span>
+                </Link>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>);
 
