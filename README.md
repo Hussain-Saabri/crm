@@ -1,4 +1,4 @@
-# 🚀 GrowEasy CRM (Frontend)
+# 🚀  CRM (Frontend)
 
 This project is a production-ready **CRM Web Application** built to manage leads efficiently. It features a high-end SaaS aesthetic, interactive AI-powered CSV imports, and a mobile-first responsive architecture.
 
