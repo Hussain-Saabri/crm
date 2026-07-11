@@ -76,7 +76,7 @@ export function ImportCsvPage() {
       const formData = new FormData();
       formData.append("file", file);
 
-      // We can mock some progress while fetching
+      
       const progressInterval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 90) {
@@ -87,7 +87,8 @@ export function ImportCsvPage() {
         });
       }, 500);
 
-      const response = await fetch("http://localhost:5000/api/upload-csv", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL ;
+      const response = await fetch(`${apiUrl}/api/upload-csv`, {
         method: "POST",
         body: formData,
       });
