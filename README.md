@@ -79,6 +79,8 @@ NEXT_PUBLIC_API_URL=http://localhost:5000
 
 ## 🚀 Getting Started
 
+### Option 1: Standard Local Setup
+
 1. **Install Dependencies**:
    ```bash
    npm install
@@ -93,6 +95,16 @@ NEXT_PUBLIC_API_URL=http://localhost:5000
    ```bash
    npm run build
    ```
+
+### Option 2: Docker Setup (Recommended)
+
+You can run the entire frontend environment using Docker without needing to install Node.js locally.
+
+1. **Start the Application**:
+   ```bash
+   docker-compose up
+   ```
+   *(The app will be available at `http://localhost:3000` with hot-reloading enabled).*
 
 ---
 
