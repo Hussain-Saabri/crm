@@ -4,6 +4,25 @@ This project is a production-ready **CRM Web Application** built to manage leads
 
 ---
 
+## 🎥 Project Walkthrough & Features
+
+The application is built with a premium **Dark Mode** interface and navigated via a sleek sidebar containing two main pages:
+
+### 1. Manage Leads
+- **Data Table**: Displays lead data (currently mocked) with a custom-designed scrollbar for a polished look.
+- **Loading State**: Features a premium shimmer skeleton effect that prevents layout shifts while the table is loading.
+- **Smart Filtering**: Built-in filters for lead status (e.g., All, Sale, Sale Done).
+- **Visual Badges**: Dynamic, color-coded badges applied to the `Lead Status` and `Source` columns for quick visual scanning.
+
+### 2. Import CSV
+- **Guided Flow**: A step-by-step UI guiding the user through the upload process.
+- **Strict Validation**: Drag-and-drop zone that exclusively accepts `.csv` files. Invalid files trigger immediate error toasts.
+- **Interactive Preview**: Users can preview their file data before finalizing the import.
+- **Error Handling**: If a CSV is uploaded without headers or valid data, the system gracefully handles it by displaying a "no rows found" warning instead of crashing.
+- **Reusability**: Users can easily reset the state to upload another file seamlessly.
+
+---
+
 ## 🏗️ Architectural Decisions & Trade-offs
 
 ### 1. Modular Directory Structure
